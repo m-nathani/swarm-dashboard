@@ -1,4 +1,4 @@
-## `Swarm Test Stats`
+## `Docker Swarm Dashboard`
 > Save statistics for Docker Swarm.
 
 ### Setup
@@ -12,5 +12,6 @@
   λ cd 'client'
   λ npm install
   # run both the client and server
+  λ cd '../'
   λ npm run dev
-```λ
+```

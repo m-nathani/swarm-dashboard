@@ -1,5 +1,5 @@
-## `Swarm Dashboard Client`
-> Dashboard of statistics for Docker Swarm.
+## `Docker Swarm Dashboard Client`
+> Dashboard for Docker Swarm.
 
 ### Setup
 ```bash
@@ -15,4 +15,5 @@
 ### Proxy
 ```bash
   # On Port: 4000
-  # The key to use an Koa backend with a project created with `react-app` is on using a **proxy**. We have a _proxy_ entry in `client/package.json`
+  The key to use an Koa backend with a project created with `react-app` is on using a **proxy**. We have a _proxy_ entry in `client/package.json`
+```
