@@ -2,7 +2,6 @@ import stats from '../service/stats';
 import admin from '../conf/init-firebase';
 
 export const getStats = (ctx) => {
-  console.log(stats.getStatistics());
   ctx.body = { stats: stats.getStatistics(), time: Date.now() };
 };
 

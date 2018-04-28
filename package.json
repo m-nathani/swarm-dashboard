@@ -1,5 +1,5 @@
 {
-  "name": "SwarmTest",
+  "name": "swarm-dashboard",
   "version": "1.0.0",
   "description": "Save statistics for Docker Swarm",
   "main": "src/index.js",
@@ -8,6 +8,9 @@
     "test": "ava -v",
     "start": "node bin/server",
     "watch": "nodemon bin/server",
+    "client": "cd client && npm start",
+    "server": "nodemon bin/server",
+    "dev": "concurrently --kill-others-on-fail \"npm run  server\" \"npm run client\"",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
@@ -32,7 +35,8 @@
     "eslint": "^3.11.0",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "concurrently": "^3.5.0"
   },
   "ava": {
     "babel": "inherit",

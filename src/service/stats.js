@@ -3,7 +3,9 @@ import admin from '../conf/init-firebase';
 var db = admin.database();
 
 const getStatistics = () => {
-  db.ref("/stats");
+  //var postsRef = db.ref("/stats");
+  //postsRef.toString();
+  return 'Hello World!'
 };
 
 const postStatistics = (data) => {

@@ -4,11 +4,13 @@
 ### Setup
 ```bash
   # clone the repository
-  λ git clone ''
+  λ git clone 'https://github.com/m-nathani/swarm-dashboard'
   # change the current directory
-  λ cd ''
-  # install all dependencies
+  λ cd 'swarm-dashboard'
+  # install server and client dependencies
   λ npm install
-  # run the project
-  λ npm start
-```
+  λ cd 'client'
+  λ npm install
+  # run both the client and server
+  λ npm run dev
+```λ
