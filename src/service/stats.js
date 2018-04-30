@@ -3,19 +3,27 @@ import admin from '../conf/init-firebase';
 var db = admin.database();
 
 const getStatistics = () => {
-  //var postsRef = db.ref("/stats");
-  //postsRef.toString();
-  return 'Hello World!'
+  return admin.database().ref('/stats').once('value').then(function(snapshot) {
+    return snapshot.val();
+  });
 };
 
 const postStatistics = (data) => {
   var postsRef = db.ref("/stats");
-  postsRef.push().set(data);
+  return postsRef.push(data).then(function() {
+    return "Data saved successfully.";
+  }).catch(function(error) {
+    return "Data could not be saved." + error;
+  });
 }
 
 const postErrorLog = (data) => {
   var postsRef = db.ref("/error_log");
-  postsRef.push().set(data);
+  return postsRef.push(data).then(function() {
+    return "Data saved successfully.";
+  }).catch(function(error) {
+    return "Data could not be saved." + error;
+  });
 }
 
 module.exports = {

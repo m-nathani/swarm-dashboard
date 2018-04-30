@@ -24,13 +24,13 @@ const conf = convict({
   db: {
     doc: 'The host to connect db.',
     format: '*',
-    default: 'https://swarmtest-57ab1.firebaseio.com',
+    default: 'https://swarmtest-2f2e0.firebaseio.com',
     env: 'DB_HOST',
   },
   serviceAccount: {
     "doc": "service account file path",
     "format": String,
-    "default": "./swarmtest-57ab1-firebase-adminsdk-3czfu-3eb7e269e3.json",
+    "default": "./swarmtest-2f2e0-firebase-adminsdk-gqn44-dac5f51f5b.json",
     env: 'SERVICE_ACCOUNT',
   }
 });

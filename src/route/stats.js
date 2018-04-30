@@ -5,12 +5,12 @@ import compose from 'koa-compose';
 import * as Ctrl from '../controller/stats';
 
 const router = new Router({
-  prefix: '/stats',
+  prefix: '/node',
 });
 
 router.get('/', Ctrl.getStats);
-router.post('/', Ctrl.postStats);
-router.post('/error', Ctrl.postErrorLog);
+router.post('/stats', Ctrl.postStats);
+router.post('/log', Ctrl.postErrorLog);
 
 router.put('/', Ctrl.put);
 
