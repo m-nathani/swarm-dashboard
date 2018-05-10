@@ -15,6 +15,7 @@
     "lint:fix": "eslint src --fix"
   },
   "dependencies": {
+    "@koa/cors": "^2.2.1",
     "babel-core": "^6.18.2",
     "babel-preset-koa2-node7": "^0.1.0",
     "boom": "^4.2.0",
@@ -26,7 +27,8 @@
     "koa-bunyan-logger": "^2.0.0-pre1",
     "koa-compose": "^3.1.0",
     "koa-json": "^2.0.2",
-    "koa-router": "^7.0.1"
+    "koa-router": "^7.0.1",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",

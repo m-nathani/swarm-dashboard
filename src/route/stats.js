@@ -8,10 +8,9 @@ const router = new Router({
   prefix: '/node',
 });
 
-router.get('/', Ctrl.getStats);
+router.get('/stats', Ctrl.getStats);
 router.post('/stats', Ctrl.postStats);
 router.post('/log', Ctrl.postErrorLog);
-
 router.put('/', Ctrl.put);
 
 const routes = router.routes();

@@ -1,5 +1,6 @@
 import Koa from 'koa';
 import debug from 'debug';
+import cors from '@koa/cors';
 
 import bodyParser from 'koa-bodyparser';
 import jsonMiddleware from 'koa-json';
@@ -14,6 +15,9 @@ import conf from './conf';
 
 const app = new Koa();
 const d = debug('kickstarter:root');
+
+//Register CORS middleware
+app.use(cors())
 
 // Register middleware
 app.use(jsonMiddleware());
