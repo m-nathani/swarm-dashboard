@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './app.css';
+import * as R from 'ramda'
 import Header from '../../components/header'
+import NodeStats from '../../components/node-stats'
 
 class App extends Component {
   state = {
@@ -9,14 +11,13 @@ class App extends Component {
 
   componentDidMount() {
     this.callApi()
-      .then(res => this.setState({ response: res.time }))
+      .then(res => this.setState({ response: res }))
       .catch(err => console.log(err));
   }
 
   callApi = async () => {
-    const response = await fetch('/node');
+    const response = await fetch('/node/stats');
     const body = await response.json();
-    console.log(body);
     if (response.status !== 200) throw Error(body.message);
 
     return body;
@@ -26,7 +27,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header></Header>
-        <p className="app-intro">{this.state.response}</p>
+        <NodeStats data={this.state.response && R.values(this.state.response.stats) || []} ></NodeStats>
       </div>
     );
   }
